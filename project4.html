@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="project4.css" />
+</head>
+<body>
+
+  <div class="search-area">
+    <input id="cityInput" type="text" placeholder="Enter a City..." />
+    <button id="searchBtn">Search</button>
+  </div>
+
+  <main class="container">
+    <section class="weather-card">
+      <div class="weather-left">
+        <!-- Animated icon container -->
+        <div id="animatedIcon" class="animated-icon icon-sun">
+          <!-- CSS will draw the icon -->
+        </div>
+      </div>
+
+      <div class="weather-right">
+        <p class="label">Today</p>
+        <h1 id="currentCity">City</h1>
+        <p id="currentTemp" class="big-temp">--°C</p>
+        <p id="currentDesc" class="desc">Weather Description</p>
+
+        <!-- Horizontal info bar (icons created with CSS) -->
+        <div class="info-bar">
+          <div class="info-item">
+            <div class="ico ico-wind" aria-hidden></div>
+            <div class="info-text">
+              <div class="info-title">Wind</div>
+              <div id="windVal" class="info-value">-- km/h</div>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="ico ico-humidity" aria-hidden></div>
+            <div class="info-text">
+              <div class="info-title">Humidity</div>
+              <div id="humidityVal" class="info-value">--%</div>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="ico ico-sunrise" aria-hidden></div>
+            <div class="info-text">
+              <div class="info-title">Sunrise</div>
+              <div id="sunriseVal" class="info-value">--:--</div>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="ico ico-sunset" aria-hidden></div>
+            <div class="info-text">
+              <div class="info-title">Sunset</div>
+              <div id="sunsetVal" class="info-value">--:--</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Forecast strip -->
+    <section id="forecast" class="forecast-strip"></section>
+
+  </main>
+
+  <!-- Modal for forecast details -->
+  <div id="modal" class="modal">
+    <div class="modal-card">
+      <button id="closeModal" class="close-btn">&times;</button>
+      <h2 id="modalDay">Day</h2>
+      <div id="modalIcon" class="modal-icon"></div>
+      <p id="modalDesc"></p>
+      <p id="modalTemp"></p>
+      <p id="modalWind"></p>
+      <p id="modalHumidity"></p>
+      <p id="modalSun"></p>
+    </div>
+  </div>
+
+  <!-- Loading spinner -->
+  <div id="loader" class="loader" aria-hidden="true" style="display:none;">
+    <div class="spinner"></div>
+  </div>
+
+  <script src="project4.js"></script>
+</body>
+</html>
